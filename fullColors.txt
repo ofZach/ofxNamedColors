@@ -1,17 +1,3 @@
-ofxNamedColors
-==============
-
-this comes from
-http://en.wikipedia.org/wiki/List_of_colors_(compact)
-
-with some modifications to the names to let them work as variable names.
-
-there's about 900+ named colors.
-
-I might re-organize how this is setup in 
-
-+ + + + 
-
 aeroBlue,C9FFE5
 airForceBlue_Raf,5D8AA8
 airForceBlue_Usaf,00308F
