@@ -5,7 +5,7 @@ this comes from
 
 http://en.wikipedia.org/wiki/List_of_colors_(compact)
 
-with some modifications to the names to let them work as variable names.  there's about 900+ named colors.
+with some modifications to the names to let them work as variable names.  there's about 900+ named colors. 
 
 usage: 
 
@@ -20,3 +20,13 @@ everything is static inside the class.  you can also use some helper functions f
 	ofxNamedColors::colorNames  // the vector of mappings. 
 
 etc.
+
+the example shows you all the colors: 
+
+![example pic](http://i.imgur.com/dEllh.png)
+
+as well as lets you sort them by hue, which can be useful: 
+
+![example pic](http://i.imgur.com/Zy4Hw.png)
+
+
