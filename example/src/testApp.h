@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-#include "ofxExtendedColors.h"
+#include "ofxNamedColors.h"
 
 class testApp : public ofBaseApp{
 
@@ -24,6 +24,6 @@ class testApp : public ofBaseApp{
     
     int sortedType;             // keep track of which sort we've done
     
-    ofxExtendedColors colors;
+   
 		
 };

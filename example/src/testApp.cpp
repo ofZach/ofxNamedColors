@@ -22,7 +22,12 @@ bool compareSaturation( const colorNameMapping& s1, const colorNameMapping& s2 )
 //--------------------------------------------------------------
 void testApp::setup(){
     
+    ofxNamedColors::setupColorMap();
+    
+    
     sortedType = 1; // by name, at the start
+    
+    
     
 }
 
@@ -40,7 +45,7 @@ void testApp::draw(){
     
     // calculate the total size needed to display all the colors
     
-    float totalSize = (ceil(colors.colorNameMap.size()/3.0)) * 50 - ofGetHeight() + 60;
+    float totalSize = (ceil(ofxNamedColors::colorNameMap.size()/3.0)) * 50 - ofGetHeight() + 60;
     
     // map the smoothed mouse to this:
     
@@ -51,15 +56,15 @@ void testApp::draw(){
     
     
     
-    for (int i = 0; i < colors.colorNames.size(); i++){
+    for (int i = 0; i < ofxNamedColors::colorNames.size(); i++){
         
         int x = (i % 3) * ofGetWidth()/3.0;
         int y = (floor(i / 3)) * 50;
         
-        ofSetColor( colors.colorNames[i].color );
+        ofSetColor( ofxNamedColors::colorNames[i].color );
         ofRect(0 + x, y - offset, (i%3 == 2) ? ofGetWidth() - x : ofGetWidth()/3.0, 50);
         
-        ofDrawBitmapStringHighlight(colors.colorNames[i].name, 20 + x, y -offset+30, ofColor::white, ofColor::black);
+        ofDrawBitmapStringHighlight(ofxNamedColors::colorNames[i].name, 20 + x, y -offset+30, ofColor::white, ofColor::black);
         
     }
     
@@ -78,22 +83,22 @@ void testApp::keyPressed(int key){
     if (key == '1'){
         if (sortedType != 1){
             sortedType = 1;
-            ofSort(colors.colorNames, compareName);
+            ofSort(ofxNamedColors::colorNames, compareName);
         }
     } else if (key == '2'){
         if (sortedType != 2){
             sortedType = 2;
-            ofSort(colors.colorNames, compareHue);
+            ofSort(ofxNamedColors::colorNames, compareHue);
         }
     } else if (key == '3'){
         if (sortedType != 3){
             sortedType = 3;
-            ofSort(colors.colorNames, compareBrightness);
+            ofSort(ofxNamedColors::colorNames, compareBrightness);
         }
     } else if (key == '4'){
         if (sortedType != 4){
             sortedType = 4;
-            ofSort(colors.colorNames, compareSaturation);
+            ofSort(ofxNamedColors::colorNames, compareSaturation);
         }
     }
 }
