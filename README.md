@@ -16,7 +16,7 @@ usage:
 
 everything is static inside the class.  you can also use some helper functions for iterating through the whole list 
 
-	setupColorMap();
-	ofxNamedColors::colorNames
+	setupColorMap();  // allocates the static map of name to ofColor and populated a vector of color/name mappings
+	ofxNamedColors::colorNames  // the vector of mappings. 
 
 etc.
